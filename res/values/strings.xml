@@ -2,6 +2,14 @@
 <resources>
 
     <string name="app_name">Widget Experiment</string>
-    <string name="static_text">Static Text</string>
+    <string name="text1">Text 1</string>
+    <string name="text2">Text 2</string>
+    <string name="text3">Text 3</string>
+    
+    <string name="cmd_play_pause">Play/Pause</string>
+    <string name="cmd_stop">Stop</string>
+    <string name="cmd_preview">Preview</string>
+    <string name="cmd_next">Next</string>
+    <string name="cmd_mute">Mute</string>
 
 </resources>

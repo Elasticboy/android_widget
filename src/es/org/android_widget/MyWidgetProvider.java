@@ -33,7 +33,7 @@ public class MyWidgetProvider extends AppWidgetProvider {
 			Log.w("WidgetExample", data);
 			
 			// Set the text
-			remoteViews.setTextViewText(R.id.update, data);
+			remoteViews.setTextViewText(R.id.textToUpdate, data);
 
 			// Register an onClickListener
 			Intent intent = new Intent(context, MyWidgetProvider.class);
@@ -41,7 +41,7 @@ public class MyWidgetProvider extends AppWidgetProvider {
 			intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
 
 			PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-			remoteViews.setOnClickPendingIntent(R.id.update, pendingIntent);
+			remoteViews.setOnClickPendingIntent(R.id.textToUpdate, pendingIntent);
 			appWidgetManager.updateAppWidget(widgetId, remoteViews);
 		}
 	}
