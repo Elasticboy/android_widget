@@ -11,6 +11,10 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+/**
+ * @author Cyril Leroux
+ *
+ */
 public class MyWidgetProvider extends AppWidgetProvider {
 
 	//private static final String ACTION_CLICK = "ACTION_CLICK";
@@ -22,16 +26,16 @@ public class MyWidgetProvider extends AppWidgetProvider {
 		// Get ids of all the instances of the widget
 		ComponentName widget = new ComponentName(context, MyWidgetProvider.class);
 		int[] widgetIds = appWidgetManager.getAppWidgetIds(widget);
-		
+
 		for (int widgetId : widgetIds) {
-			
+
 			// Create some random data
 			int number = (new Random().nextInt(100));
 			final String data = String.valueOf(number);
 
 			RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
 			Log.w("WidgetExample", data);
-			
+
 			// Set the text
 			remoteViews.setTextViewText(R.id.textToUpdate, data);
 
@@ -45,4 +49,4 @@ public class MyWidgetProvider extends AppWidgetProvider {
 			appWidgetManager.updateAppWidget(widgetId, remoteViews);
 		}
 	}
-} 
+}
