@@ -20,8 +20,7 @@ public class MyWidgetProvider extends AppWidgetProvider {
 	//private static final String ACTION_CLICK = "ACTION_CLICK";
 
 	@Override
-	public void onUpdate(Context context, AppWidgetManager appWidgetManager,
-			int[] appWidgetIds) {
+	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 
 		// Get ids of all the instances of the widget
 		ComponentName widget = new ComponentName(context, MyWidgetProvider.class);
